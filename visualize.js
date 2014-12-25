@@ -1,6 +1,6 @@
 var container = {
 			defaults: {
-				num: 3, // default number of boxes
+				num: 3, 
 				events: "click",
 				block: "div",
 				Class: "list-block alive",
@@ -9,8 +9,8 @@ var container = {
 				handler: "#frame-wrap",
 				matrix_rows: 4,
 				matrix_cols: 4,
-				rows_box: 3,
-				cols_box: 4,
+				rows_box: 3, // default number of rows
+				cols_box: 4, // default number of columns
 				topStrip: ".toolbar",
 				matrix: ".matrix",
 				matrixSelect: ".matrix-select",
