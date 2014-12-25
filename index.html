@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Google Trends Visualize with Javascript</title>
+	<style>
+	html, body{
+		margin:0;
+		padding:0;
+		background:#fff;
+	}
+	div, ul{
+		margin:0;
+		padding:0;
+	}
+	.toolbar{
+		clear: both;
+		padding: 8px 10px 0px 10px;
+		width: 100%;
+		display: block;
+		box-sizing: border-box;
+		position: fixed;
+		height: 42px;
+		top: 0;
+		left: 0;
+		background: #fff;
+		z-index: 20;
+		-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	}
+	.style{float: right;}
+	.flt{float: left;}
+	.fltr{float: right;}
+
+	.output{
+		position: relative;
+		width: 100%;
+	}
+	#icontainer{
+		position: relative;
+		width: 100%;
+		display: inline-block;
+	}
+	#frame-wrap{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		position: relative;
+		top:42px;
+		left:0;
+		right:0;
+	}
+ .white-space{white-space: nowrap;}
+ .icontainer{/*overflow:hidden;*/position:relative;width:100%;margin-top:0}
+ .frame-wrap .list-block{height:89px;list-style:none outside none;width:200px;outline:none;border:0;padding:0;position: relative;display: block;box-sizing:border-box;margin: 0;float: left;}
+ .matrix-box{
+ 	position: absolute;
+ }
+ .matrix td{
+	background: #aaa;
+	color: #fff;
+	padding: 2px
+ }
+  .matrix:hover td{
+  	background: #888;
+  }
+
+ .matrix-select{
+ 	position: fixed;
+ 	z-index: 10;
+ 	left:auto;
+ 	top:auto;
+ 	display: none;
+ 	border-collapse: collapse;
+ 	background: rgba(255,255,255,1);
+ }
+ .matrix-select td{
+ 	background: rgba(0,0,0,0.4);
+	color: #fff;
+	padding: 10px;
+	border:1px solid rgba(0,0,0,1);
+ }
+  .matrix-select td.hovered-cell{
+ 	background: rgba(0,0,0,0.7);
+  }
+  .alive.dead{display: none}
+
+	</style>
+</head>
+<body>
+<div class="outer">
+	<div class="toolbar">
+		<div class="controls" >
+			<div class="matrix-container">
+				<div id="matrix-box" class="matrix-box">
+					<table class="matrix" id="matrix"></table>
+				<table class="matrix-select">
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="output">
+		<div class="icontainer" id="icontainer">
+			<div class="frame-wrap" id="frame-wrap" style="left: 0px;">
+			</div>
+		</div>
+	</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="visualise.js"></script>
+</body>
+</html>
